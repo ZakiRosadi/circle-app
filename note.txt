@@ -1,0 +1,38 @@
+import MiddleHome from "@/components/MiddleHome";
+import Profile from "@/components/Profile";
+import SideBar from "@/components/SideBar";
+import IProfileType from "@/type/ProfileType";
+import { useEffect, useState } from "react";
+import data from "@/mocks/profileMocks.json";
+import { Box, Flex } from "@chakra-ui/react";
+import Suggestion from "@/components/suggestion";
+import PostThread from "@/components/PostThread";
+
+export default function Home() {
+  const [thread, setThread] = useState<IProfileType[]>([]);
+  useEffect(() => {
+    setThread(data);
+  }, []);
+
+  return (
+    <Flex>
+      <Box w={"20%"}>
+        <SideBar />
+      </Box>
+
+      <Box w={"60%"}>
+        <PostThread />
+        {thread.map((item) => (
+          <MiddleHome key={item.id} {...item} />
+        ))}
+      </Box>
+
+      <Box w={"20%"}>
+        <Profile />
+        <Box mt={5}>
+          <Suggestion />
+        </Box>
+      </Box>
+    </Flex>
+  );
+}
