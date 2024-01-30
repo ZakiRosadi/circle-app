@@ -16,7 +16,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { BiChart } from "react-icons/bi";
+import { BiChart, BiChat } from "react-icons/bi";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -105,7 +105,7 @@ export default function ThreadDetailLayout() {
             </Button>
 
             <Button variant="ghost" gap={2}>
-              <BiChart /> {threadDtl?.replies}
+              <BiChat /> {threadDtl?.reply.length}
             </Button>
           </CardFooter>
         </Card>

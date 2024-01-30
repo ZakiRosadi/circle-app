@@ -43,7 +43,7 @@ export default function SideBar() {
       id: 3,
       name: "follows",
       icon: <Icon as={FaHeart} />,
-      link: "/follows",
+      link: "/listfollow",
     },
     {
       id: 4,
@@ -54,7 +54,12 @@ export default function SideBar() {
   ];
   return (
     <>
-      <Stack height={"100vh"} justifyContent={"align-items"} padding={"10px"}>
+      <Stack
+        height={"100vh"}
+        justifyContent={"align-items"}
+        padding={"10px"}
+        position={"fixed"}
+      >
         <Box padding={"10px"}>
           <Box fontSize={"3xl"}>
             <Flex>
@@ -83,6 +88,7 @@ export default function SideBar() {
           </Button>
         </Box>
         <Button
+          mb={20}
           onClick={handleLogout}
           colorScheme="teal"
           variant="ghost"

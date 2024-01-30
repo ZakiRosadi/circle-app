@@ -6,6 +6,7 @@ import Register from "./page/Register";
 import Login from "./page/Login";
 import useLogin from "./hook/useLogin";
 import { useEffect } from "react";
+import ListFollowPage from "./page/ListFollowPage";
 
 export default function App() {
   const { saveDataUser } = useLogin();
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="/threadDetail/:id" element={<Threaddetaill />}></Route>
+          <Route path="/listfollow" element={<ListFollowPage />}></Route>
         </Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>

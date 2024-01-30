@@ -33,9 +33,6 @@ export default function MiddleHome(props: Props) {
       return item;
     }
   });
-  // useEffect(() => {
-
-  // }, [handleClick, handleUnClick, item.like, userId]);
 
   useEffect(() => {
     item.like.filter((data: any) => {
@@ -43,6 +40,7 @@ export default function MiddleHome(props: Props) {
         return setLikeId(data.id);
       }
     });
+    // console.log(item);
   }, [item.like, userId]);
 
   return (

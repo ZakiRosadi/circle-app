@@ -28,10 +28,14 @@ export default function MainLayout() {
         position={"relative"}
         borderLeft={"1px solid #eaeaea"}
       >
-        <Box>
+        <Box position={"sticky"} top={0}>
           <Profile />
-          <Suggestion />
-          <Footer />
+          <Box mt={2}>
+            <Suggestion />
+          </Box>
+          <Box mt={"auto"}>
+            <Footer />
+          </Box>
         </Box>
       </GridItem>
     </Grid>

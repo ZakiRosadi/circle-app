@@ -40,10 +40,10 @@ export default function Reply(props: props) {
         <Box mt={5}>
           <Text>{item.content}</Text>
         </Box>
-        <Box>
-          <Image src={reply?.image} />
+        <Box mt={3}>
+          <Image w={"50%"} h={"200px"} src={reply?.image} />
         </Box>
-        <Icon as={CiHeart} />
+        <Icon mt={5} as={CiHeart} />
       </Box>
     </>
   );

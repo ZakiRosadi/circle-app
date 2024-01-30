@@ -36,3 +36,8 @@ export default function Home() {
     </Flex>
   );
 }
+
+
+
+any method of api like POST,PATCH,DELETE will be put in hook folder with useEffect
+method get can be used directly in page folder or another except hook folder

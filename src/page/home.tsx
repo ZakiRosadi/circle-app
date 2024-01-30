@@ -17,7 +17,8 @@ export default function Home() {
   };
   useEffect(() => {
     getThread();
-  }, [getThread]);
+    console.log(thread);
+  }, []);
 
   return (
     <>
